@@ -1,8 +1,5 @@
-import 'package:base_project/src/config/constants/general_constants.dart';
 import 'package:base_project/src/config/utils/function_helper.dart';
-import 'package:base_project/src/injectable/injectable.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
@@ -59,38 +56,38 @@ class RequestInterceptor extends Interceptor {
   // option: const ApiServiceOption(),
   // );
 
-  Future<void> _updateToken(String refreshedToken) async {
-    if (kIsWeb) {}
-  }
+  // Future<void> _updateToken(String refreshedToken) async {
+  //   if (kIsWeb) {}
+  // }
 
-  Future<void> _retryLastRequest(
-    RequestOptions requestOptions,
-    ErrorInterceptorHandler handler,
-    String refreshedToken,
-  ) async {
-    Map<String, dynamic> newHeader = requestOptions.headers;
-    newHeader['accept'] = "application/json";
-    newHeader['iam'] = "mobile";
-    newHeader['cookie'] = GeneralConstants.jwt;
-    await getIt
-        .get<Dio>()
-        .request(
-          '',
-          data: requestOptions.data,
-          onReceiveProgress: requestOptions.onReceiveProgress,
-          queryParameters: requestOptions.queryParameters,
-          options: Options(
-            headers: newHeader,
-            method: requestOptions.method,
-            contentType: requestOptions.contentType,
-            extra: requestOptions.extra,
-          ),
-        )
-        .then((res) => handler.resolve(res))
-        .catchError(
-      (e) {
-        if (e is DioError) handler.reject(e);
-      },
-    );
-  }
+  // Future<void> _retryLastRequest(
+  //   RequestOptions requestOptions,
+  //   ErrorInterceptorHandler handler,
+  //   String refreshedToken,
+  // ) async {
+  //   Map<String, dynamic> newHeader = requestOptions.headers;
+  //   newHeader['accept'] = "application/json";
+  //   newHeader['iam'] = "mobile";
+  //   newHeader['cookie'] = GeneralConstants.jwt;
+  //   await getIt
+  //       .get<Dio>()
+  //       .request(
+  //         '',
+  //         data: requestOptions.data,
+  //         onReceiveProgress: requestOptions.onReceiveProgress,
+  //         queryParameters: requestOptions.queryParameters,
+  //         options: Options(
+  //           headers: newHeader,
+  //           method: requestOptions.method,
+  //           contentType: requestOptions.contentType,
+  //           extra: requestOptions.extra,
+  //         ),
+  //       )
+  //       .then((res) => handler.resolve(res))
+  //       .catchError(
+  //     (e) {
+  //       if (e is DioError) handler.reject(e);
+  //     },
+  //   );
+  // }
 }

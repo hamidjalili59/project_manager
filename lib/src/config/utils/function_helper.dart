@@ -1,8 +1,4 @@
-import 'package:base_project/src/config/constants/general_constants.dart';
-import 'package:base_project/src/config/routes/router.dart';
-import 'package:base_project/src/injectable/injectable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:logger/logger.dart';
 
 class FunctionHelper {
