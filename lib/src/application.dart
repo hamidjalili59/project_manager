@@ -16,6 +16,15 @@ class Application extends StatelessWidget {
         minTextAdapt: true,
         builder: (_, __) {
           return MaterialApp.router(
+            themeMode: ThemeMode.dark,
+            darkTheme: ThemeData(
+              useMaterial3: true,
+              colorSchemeSeed: GeneralConstants.colorSchemeSeedDark,
+            ),
+            theme: ThemeData(
+              useMaterial3: true,
+              colorSchemeSeed: GeneralConstants.colorSchemeSeedLight,
+            ),
             routerDelegate: _appRouter.delegate(),
             routeInformationParser: _appRouter.defaultRouteParser(),
             debugShowCheckedModeBanner: false,

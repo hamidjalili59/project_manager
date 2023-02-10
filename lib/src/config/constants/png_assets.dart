@@ -1,6 +1,7 @@
 class PngAssets {
   const PngAssets._();
-  static String get logo => 'logo'.png;
+  static String get iconDark => 'icon_dark'.png;
+  static String get iconLight => 'icon_light'.png;
 }
 
 extension on String {

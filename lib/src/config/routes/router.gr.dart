@@ -22,7 +22,13 @@ class _$AppRouter extends RootStackRouter {
         routeData: routeData,
         child: const SplashPage(),
       );
-    }
+    },
+    AuthRoute.name: (routeData) {
+      return MaterialPageX<AuthPage>(
+        routeData: routeData,
+        child: const AuthPage(),
+      );
+    },
   };
 
   @override
@@ -37,6 +43,10 @@ class _$AppRouter extends RootStackRouter {
           SplashRoute.name,
           path: '/splash',
         ),
+        RouteConfig(
+          AuthRoute.name,
+          path: '/auth',
+        ),
       ];
 }
 
@@ -50,4 +60,16 @@ class SplashRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'SplashRoute';
+}
+
+/// generated route for
+/// [AuthPage]
+class AuthRoute extends PageRouteInfo<void> {
+  const AuthRoute()
+      : super(
+          AuthRoute.name,
+          path: '/auth',
+        );
+
+  static const String name = 'AuthRoute';
 }

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.base_project">
+    package="com.project_manager.hj">
    <application
-        android:label="base_project"
+        android:label="Project"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
