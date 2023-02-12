@@ -1,3 +1,4 @@
+import 'package:base_project/src/config/constants/general_constants.dart';
 import 'package:base_project/src/config/constants/png_assets.dart';
 import 'package:base_project/src/config/routes/router.dart';
 import 'package:base_project/src/injectable/injectable.dart';
@@ -10,11 +11,17 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 3)).whenComplete(
-      () => getIt.get<AppRouter>().pushNamed('/auth'),
+      () {
+        if (GeneralConstants.isLoggedIn) {
+          getIt.get<AppRouter>().pushNamed('/home');
+        } else {
+          getIt.get<AppRouter>().pushNamed('/auth');
+        }
+      },
     );
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Theme.of(context).colorScheme.onBackground,
         body: SizedBox(
           width: 1.sw,
           height: 1.sh,

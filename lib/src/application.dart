@@ -1,6 +1,5 @@
 import 'package:base_project/src/config/constants/general_constants.dart';
 import 'package:base_project/src/config/routes/router.dart';
-import 'package:base_project/src/config/utils/text_themes.dart';
 import 'package:base_project/src/injectable/injectable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +21,19 @@ class Application extends StatelessWidget {
             /// this theme data will be change dark theme
             darkTheme: ThemeData(
               useMaterial3: true,
-              colorSchemeSeed: GeneralConstants.colorSchemeSeedDark,
+              // colorSchemeSeed: GeneralConstants.colorSchemeSeedDark,
+              colorScheme: const ColorScheme(
+                  brightness: Brightness.dark,
+                  primary: Color.fromARGB(255, 204, 8, 116),
+                  onPrimary: Colors.orange,
+                  secondary: Colors.blue,
+                  onSecondary: Colors.black,
+                  error: Colors.white,
+                  onError: Colors.red,
+                  background: Color(0xff0f1319),
+                  onBackground: Color(0xff191D27),
+                  surface: Colors.grey,
+                  onSurface: Color(0xff1F2329)),
               textTheme: Theme.of(context).textTheme.apply(
                     bodyColor: Colors.white,
                     displayColor: Colors.white,
