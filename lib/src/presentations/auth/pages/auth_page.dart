@@ -1,21 +1,17 @@
+import 'package:base_project/src/config/constants/general_constants.dart';
+import 'package:base_project/src/config/routes/router.dart';
+import 'package:base_project/src/injectable/injectable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AuthPage extends StatefulWidget {
+class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
-
-  @override
-  State<AuthPage> createState() => _AuthPageState();
-}
-
-class _AuthPageState extends State<AuthPage> {
-  bool ob = true;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.onBackground,
+        backgroundColor: Theme.of(context).colorScheme.background,
         body: SizedBox(
           width: 1.sw,
           height: 1.sh,
@@ -29,14 +25,18 @@ class _AuthPageState extends State<AuthPage> {
                   child: Align(
                       alignment: Alignment.centerRight,
                       child: Padding(
-                        padding: EdgeInsets.only(top:18.0.h,right: 18.w),
+                        padding: EdgeInsets.only(top: 18.0.h, right: 18.w),
                         child: SizedBox(
                           width: 140.w,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                               Text('Signup',style: Theme.of(context).textTheme.labelLarge),
-                              SizedBox(width: 10.w,),
+                              Text('Signup',
+                                  style:
+                                      Theme.of(context).textTheme.labelLarge),
+                              SizedBox(
+                                width: 10.w,
+                              ),
                               Icon(
                                 Icons.arrow_forward_rounded,
                                 color: Colors.white,
@@ -116,9 +116,7 @@ class _AuthPageState extends State<AuthPage> {
                       // helperStyle: Theme.of(context).textTheme.labelSmall,
                       suffixIcon: IconButton(
                           onPressed: () {
-                            setState(() {
-                              ob = !ob;
-                            });
+                            // ob = !ob;
                           },
                           icon: Icon(
                             Icons.remove_red_eye,
@@ -127,13 +125,19 @@ class _AuthPageState extends State<AuthPage> {
                       fillColor: Theme.of(context).colorScheme.inverseSurface,
                       filled: true,
                     ),
-                    obscureText: ob,
+                    obscureText: true,
                   ),
                 ),
                 SizedBox(height: 35.h),
                 MaterialButton(
                   color: Theme.of(context).colorScheme.primary,
-                  onPressed: () {},
+                  onPressed: () {
+                    GeneralConstants.isLoggedIn = true;
+                    Future.delayed(const Duration(milliseconds: 300))
+                        .whenComplete(
+                      () => getIt.get<AppRouter>().pushNamed('/splash'),
+                    );
+                  },
                   child: SizedBox(
                     width: 0.68.sw,
                     height: 40.h,

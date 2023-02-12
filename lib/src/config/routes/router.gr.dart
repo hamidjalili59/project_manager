@@ -29,6 +29,20 @@ class _$AppRouter extends RootStackRouter {
         child: const AuthPage(),
       );
     },
+    HomeRoute.name: (routeData) {
+      final args =
+          routeData.argsAs<HomeRouteArgs>(orElse: () => const HomeRouteArgs());
+      return MaterialPageX<HomePage>(
+        routeData: routeData,
+        child: HomePage(key: args.key),
+      );
+    },
+    ScheduleRoute.name: (routeData) {
+      return MaterialPageX<SchedulePage>(
+        routeData: routeData,
+        child: const SchedulePage(),
+      );
+    },
   };
 
   @override
@@ -46,6 +60,14 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           AuthRoute.name,
           path: '/auth',
+        ),
+        RouteConfig(
+          HomeRoute.name,
+          path: '/home',
+        ),
+        RouteConfig(
+          ScheduleRoute.name,
+          path: '/schdule',
         ),
       ];
 }
@@ -72,4 +94,40 @@ class AuthRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AuthRoute';
+}
+
+/// generated route for
+/// [HomePage]
+class HomeRoute extends PageRouteInfo<HomeRouteArgs> {
+  HomeRoute({Key? key})
+      : super(
+          HomeRoute.name,
+          path: '/home',
+          args: HomeRouteArgs(key: key),
+        );
+
+  static const String name = 'HomeRoute';
+}
+
+class HomeRouteArgs {
+  const HomeRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'HomeRouteArgs{key: $key}';
+  }
+}
+
+/// generated route for
+/// [SchedulePage]
+class ScheduleRoute extends PageRouteInfo<void> {
+  const ScheduleRoute()
+      : super(
+          ScheduleRoute.name,
+          path: '/schdule',
+        );
+
+  static const String name = 'ScheduleRoute';
 }
