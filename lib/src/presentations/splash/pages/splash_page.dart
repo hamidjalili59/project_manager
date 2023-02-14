@@ -10,15 +10,17 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 3)).whenComplete(
-      () {
-        if (GeneralConstants.isLoggedIn) {
-          getIt.get<AppRouter>().pushNamed('/home');
-        } else {
-          getIt.get<AppRouter>().pushNamed('/auth');
-        }
-      },
-    );
+    if (getIt.get<AppRouter>().currentPath == '/splash') {
+      Future.delayed(const Duration(seconds: 3)).whenComplete(
+        () {
+          if (GeneralConstants.isLoggedIn) {
+            getIt.get<AppRouter>().pushNamed('/home');
+          } else {
+            getIt.get<AppRouter>().pushNamed('/auth');
+          }
+        },
+      );
+    }
     return SafeArea(
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.onBackground,

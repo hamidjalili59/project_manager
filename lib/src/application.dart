@@ -21,10 +21,11 @@ class Application extends StatelessWidget {
             /// this theme data will be change dark theme
             darkTheme: ThemeData(
               useMaterial3: true,
+              brightness: Brightness.dark,
               // colorSchemeSeed: GeneralConstants.colorSchemeSeedDark,
               colorScheme: const ColorScheme(
                   brightness: Brightness.dark,
-                  primary: Color.fromARGB(255, 204, 8, 116),
+                  primary: Color.fromARGB(255, 8, 132, 204),
                   onPrimary: Colors.orange,
                   secondary: Colors.blue,
                   onSecondary: Colors.black,
@@ -42,7 +43,7 @@ class Application extends StatelessWidget {
 
             /// this theme data will be change light theme
             theme: ThemeData(
-              useMaterial3: true,
+              useMaterial3: true,brightness: Brightness.light,
               colorSchemeSeed: GeneralConstants.colorSchemeSeedLight,
               textTheme: Theme.of(context).textTheme.apply(
                     bodyColor: Colors.black,

@@ -22,7 +22,7 @@ part 'router.gr.dart';
     page: HomePage, //replace your route Widget
   ),
   AutoRoute<SchedulePage>(
-    path: "/schdule",
+    path: "/schedule",
     page: SchedulePage, //replace your route Widget
   ),
   // CustomRoute<Container>(
