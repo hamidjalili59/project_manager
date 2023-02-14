@@ -20,10 +20,12 @@ packages:
   api_service:
     dependency: "direct main"
     description:
-      path: "packages/api_service"
-      relative: true
-    source: path
-    version: "1.0.0+1"
+      path: "."
+      ref: main
+      resolved-ref: "82ee2254243b15959e4c2ef823162eecbb169ec4"
+      url: "https://github.com/hamidjalili59/api_service.git"
+    source: git
+    version: "1.0.0"
   archive:
     dependency: transitive
     description:
@@ -36,10 +38,10 @@ packages:
     dependency: transitive
     description:
       name: args
-      sha256: "139d809800a412ebb26a3892da228b2d0ba36f0ef5d9a82166e5e52ec8d61611"
+      sha256: "4cab82a83ffef80b262ddedf47a0a8e56ee6fbf7fe21e6e768b02792034dd440"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.2"
+    version: "2.4.0"
   async:
     dependency: transitive
     description:
@@ -259,18 +261,20 @@ packages:
   database_service:
     dependency: "direct main"
     description:
-      path: "packages/database_service"
-      relative: true
-    source: path
-    version: "1.0.0+1"
+      path: "."
+      ref: main
+      resolved-ref: cf655faf077b44ac8d992deda2043bdd29400d41
+      url: "https://github.com/hamidjalili59/database_service.git"
+    source: git
+    version: "1.0.0"
   dio:
     dependency: "direct main"
     description:
       name: dio
-      sha256: "7d328c4d898a61efc3cd93655a0955858e29a0aa647f0f9e02d59b3bb275e2e8"
+      sha256: "9fdbf71baeb250fc9da847f6cb2052196f62c19906a3657adfc18631a667d316"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.6"
+    version: "5.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -344,10 +348,10 @@ packages:
     dependency: transitive
     description:
       name: flutter_secure_storage
-      sha256: de957362e046bc68da8dcf6c1d922cb8bdad8dd4979ec69480cf1a3c481abe8e
+      sha256: "98352186ee7ad3639ccc77ad7924b773ff6883076ab952437d20f18a61f0a7c5"
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.0"
+    version: "8.0.0"
   flutter_secure_storage_linux:
     dependency: transitive
     description:
@@ -360,10 +364,10 @@ packages:
     dependency: transitive
     description:
       name: flutter_secure_storage_macos
-      sha256: "388f76fd0f093e7415a39ec4c169ae7cceeee6d9f9ba529d788a13f2be4de7bd"
+      sha256: "083add01847fc1c80a07a08e1ed6927e9acd9618a35e330239d4422cd2a58c50"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.2"
+    version: "3.0.0"
   flutter_secure_storage_platform_interface:
     dependency: transitive
     description:
@@ -384,10 +388,10 @@ packages:
     dependency: transitive
     description:
       name: flutter_secure_storage_windows
-      sha256: ca89c8059cf439985aa83c59619b3674c7ef6cc2e86943d169a7369d6a69cab5
+      sha256: fc2910ec9b28d60598216c29ea763b3a96c401f0ce1d13cdf69ccb0e5c93c3ee
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.3"
+    version: "2.0.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -514,10 +518,10 @@ packages:
     dependency: "direct dev"
     description:
       name: injectable_generator
-      sha256: "9a3bbd2c3ba821e31ef6cea3fc535c17e3a25c74e173b6cefa05f466c8338bc8"
+      sha256: b206de637c1960007b0beebe447a6ee3cf30c9e5f14542083024a9d0c49a7a09
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.3"
+    version: "2.1.4"
   io:
     dependency: transitive
     description:
@@ -650,10 +654,10 @@ packages:
     dependency: transitive
     description:
       name: path_provider_linux
-      sha256: ab0987bf95bc591da42dffb38c77398fc43309f0b9b894dcc5d6f40c4b26c379
+      sha256: "2e32f1640f07caef0d3cb993680f181c79e54a3827b997d5ee221490d131fbd9"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.7"
+    version: "2.1.8"
   path_provider_platform_interface:
     dependency: transitive
     description:
@@ -903,10 +907,10 @@ packages:
     dependency: transitive
     description:
       name: xdg_directories
-      sha256: bd512f03919aac5f1313eb8249f223bacf4927031bf60b02601f81f687689e86
+      sha256: ee1505df1426458f7f60aac270645098d318a8b4766d85fde75f76f2e21807d1
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.0+3"
+    version: "1.0.0"
   xml:
     dependency: transitive
     description:

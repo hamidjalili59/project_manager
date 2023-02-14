@@ -67,7 +67,7 @@ class _$AppRouter extends RootStackRouter {
         ),
         RouteConfig(
           ScheduleRoute.name,
-          path: '/schdule',
+          path: '/schedule',
         ),
       ];
 }
@@ -126,7 +126,7 @@ class ScheduleRoute extends PageRouteInfo<void> {
   const ScheduleRoute()
       : super(
           ScheduleRoute.name,
-          path: '/schdule',
+          path: '/schedule',
         );
 
   static const String name = 'ScheduleRoute';
